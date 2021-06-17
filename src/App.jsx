@@ -1,16 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { CardComponent } from "./components/index.jsx";
-import { NavBar } from "./components/NavBar.jsx";
+import { CardComponent } from "./components/CardComponent/index.jsx";
+import { NavBar } from "./components//NabBar/NavBar";
+import {ItemListContainer} from "./components/ItemListContainer/ItemListContainer.jsx"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <img src={logo} className="App-logo" alt="logo" />
-        <img src="..." alt="hola" />
-        <div style={{ backgroundColor: "#eeee" }}></div>
+        <ItemListContainer greeting={"Bienvenido!!"}/>
         <CardComponent />
       </header>
     </div>

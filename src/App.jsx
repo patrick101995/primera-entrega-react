@@ -9,10 +9,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <ItemListContainer greeting={"Bienvenido!!"}/>
-        <CardComponent />
       </header>
-    </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-9"></div>
+              <ItemListContainer greeting={"Bienvenido!!"}/>
+            </div>
+          </div>
+        </div>
   );
 }
 

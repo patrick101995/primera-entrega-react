@@ -3,23 +3,28 @@ import { useState } from "react";
 
 export const ItemCount = () => {
 
-  const agregarCarritoBtn = document.getElementsByClassName("btn-dark")
     
-  const [valor, setValor] = React.useState (0)
+  let [valor, setValor] = useState (1)
   let stock = 10
 
   const agregar = () =>{
     if(stock > valor){
-      setValor(valor + 1)
+      valor++
+      setValor(valor)
     }
-    
   }
 
   const quitar = () =>{
-    if(valor !== 0){
-      setValor(valor - 1)
+    if(valor !== 1){
+      valor--
+      setValor(valor)
     }
-    
+
+  }
+
+  const onAdd = (numero) =>{
+    parseInt(numero)
+    alert("Compraste "+numero+" productos")
   }
 
   return (
@@ -30,7 +35,7 @@ export const ItemCount = () => {
         <button onClick={agregar}>+</button>
     </span>
     <span>
-        <button className="btn btn-dark">
+        <button className="btn btn-dark" onClick={() => onAdd(valor)}>
             Agregar al Carrito
         </button>
     </span>

@@ -1,11 +1,10 @@
 import React from "react";
 import { useState } from "react";
 
-export const ItemCount = () => {
+export const ItemCount = ({onAdd, stock, initial}) => {
 
     
-  let [valor, setValor] = useState (1)
-  let stock = 10
+  let [valor, setValor] = useState (initial)
 
   const agregar = () =>{
     if(stock > valor){
@@ -22,10 +21,6 @@ export const ItemCount = () => {
 
   }
 
-  const onAdd = (numero) =>{
-    parseInt(numero)
-    alert("Compraste "+numero+" productos")
-  }
 
   return (
     <div className="inline d-block-flex">
